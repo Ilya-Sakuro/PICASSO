@@ -1,0 +1,28 @@
+.ids {
+    display: flex;
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 0.8;
+    color: #09aff4;
+}
+.postItem {
+    display: flex;
+    flex-direction: column;
+    margin: 1.25rem 0rem;
+}
+.title {
+    margin-bottom: 0.75rem;
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-transform: capitalize;
+}
+.body {
+    font-weight: 400;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    margin-bottom: 3rem;
+    opacity: 0.75;
+    letter-spacing: 0.5px;
+}
