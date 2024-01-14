@@ -11,13 +11,18 @@ export const postsApi = createApi({
             IPost[],
             { limit?: number; start?: number }
         >({
-            query: ({ limit = 5, start = 0 }) => ({
-                url: '/posts',
-                params: {
-                    _limit: limit,
-                    _start: start,
-                },
-            }),
+            query: ({ limit = 5, start = 0 }) =>
+                `/posts?_limit=${limit}&_start=${start}`,
+
+            // serializeQueryArgs: ({ endpointName }) => {
+            //     return endpointName;
+            // },
+            // merge(currentCacheData, responseData) {
+            //     currentCacheData.push(...responseData);
+            // },
+            // forceRefetch({ currentArg, previousArg }) {
+            //     return currentArg !== previousArg;
+            // },
         }),
         fetchPostById: builder.query<IPost, string>({
             query: (id: string = '1') => ({
@@ -26,5 +31,4 @@ export const postsApi = createApi({
         }),
     }),
 });
-
 export const { useFetchAllPostsQuery, useFetchPostByIdQuery } = postsApi;
