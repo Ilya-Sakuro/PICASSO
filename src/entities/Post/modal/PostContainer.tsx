@@ -9,11 +9,11 @@ export const PostContainer: FC<PostContainerProps> = () => {
     const { id } = useParams();
     const { data: post, isLoading } = useFetchPostByIdQuery(id!);
 
-    if (!post) {
-        return null;
-    }
     if (isLoading) {
         return <h1 className={styles.loading}>Loading...</h1>;
+    }
+    if (!post) {
+        return null;
     }
     return <Post number={post.id} title={post.title} body={post.body} />;
 };
