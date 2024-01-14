@@ -17,7 +17,7 @@ export const PostItemContainer: FC = () => {
     useEffect(() => {
         if (isMyFetching) {
             setCurrentPostStart(prev => {
-                return prev < 94 ? prev + 1 : prev;
+                return prev < 94 ? prev + 5 : prev;
             });
             setIsFetchingDown(false);
         }
@@ -25,7 +25,7 @@ export const PostItemContainer: FC = () => {
     useEffect(() => {
         if (isMyFetchingUp) {
             setCurrentPostStart(prev => {
-                return prev > 0 ? prev - 1 : prev;
+                return prev > 0 ? prev - 5 : prev;
             });
             setIsMyFetchingUp(false);
         }
