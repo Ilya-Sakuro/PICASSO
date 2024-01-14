@@ -8,7 +8,7 @@ interface IPostItemProps {
 export const PostItem: FC<IPostItemProps> = ({ post }) => {
     return (
         <li className={styles.postItem}>
-            <div className={styles.ids}>№ {post.id}</div>
+            <div className={styles.ids}>№{post.id}</div>
             <div className={styles.title}> {post.title}</div>
             <div className={styles.body}>
                 {post.body.length > 100

@@ -1,5 +1,6 @@
 .ids {
     display: flex;
+    justify-content: center;
     margin-right: 1.5rem;
     margin-bottom: 1rem;
     font-size: 3rem;
@@ -11,6 +12,7 @@
     display: flex;
     flex-direction: column;
     margin: 1.25rem 0rem;
+    padding: 1.25rem 0rem;
 }
 .title {
     margin-bottom: 0.75rem;

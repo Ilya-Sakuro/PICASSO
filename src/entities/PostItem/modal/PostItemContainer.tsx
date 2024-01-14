@@ -27,7 +27,7 @@ export const PostItemContainer: FC = () => {
 
     return (
         <InfiniteScroll
-            dataLength={posts?.length} //This is important field to render the next data
+            dataLength={posts?.length}
             next={handleLoadMore}
             hasMore={more}
             loader={<h1 className={styles.loading}>Loading...</h1>}
